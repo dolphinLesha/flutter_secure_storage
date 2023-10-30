@@ -19,6 +19,13 @@ class FlutterSecureStorageWeb extends FlutterSecureStoragePlatform {
     FlutterSecureStoragePlatform.instance = FlutterSecureStorageWeb();
   }
 
+  @override
+  Future<bool> isCupertinoProtectedDataAvailable() => Future.value(true);
+
+  @override
+  Stream<bool> get onCupertinoProtectedDataAvailabilityChanged =>
+      Stream.value(true);
+
   /// Returns true if the storage contains the given [key].
   @override
   Future<bool> containsKey({
