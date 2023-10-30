@@ -20,8 +20,6 @@ enum KeyCipherAlgorithm {
 }
 
 enum StorageCipherAlgorithm {
-    AES_CBC_PKCS7Padding(StorageCipher18Implementation::new, 1),
-    @SuppressWarnings({"UnusedDeclaration"})
     AES_GCM_NoPadding(StorageCipherGCMImplementation::new, Build.VERSION_CODES.M);
     final StorageCipherFunction storageCipher;
     final int minVersionCode;

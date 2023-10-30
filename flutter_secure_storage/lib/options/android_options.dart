@@ -6,7 +6,6 @@ enum KeyCipherAlgorithm {
 }
 
 enum StorageCipherAlgorithm {
-  AES_CBC_PKCS7Padding,
   AES_GCM_NoPadding,
 }
 
@@ -17,7 +16,7 @@ class AndroidOptions extends Options {
     KeyCipherAlgorithm keyCipherAlgorithm =
         KeyCipherAlgorithm.RSA_ECB_PKCS1Padding,
     StorageCipherAlgorithm storageCipherAlgorithm =
-        StorageCipherAlgorithm.AES_CBC_PKCS7Padding,
+        StorageCipherAlgorithm.AES_GCM_NoPadding,
     this.sharedPreferencesName,
     this.preferencesKeyPrefix,
   })  : _encryptedSharedPreferences = encryptedSharedPreferences,
