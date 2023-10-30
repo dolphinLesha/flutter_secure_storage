@@ -1,4 +1,4 @@
-library flutter_secure_storage;
+library flutter_secure_storage_sm;
 
 import 'dart:io';
 
